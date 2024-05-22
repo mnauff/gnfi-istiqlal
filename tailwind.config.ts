@@ -4,6 +4,9 @@ const config: Config = {
   content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     extend: {
+      screens: {
+        sm: "320px",
+      },
       fontFamily: {
         serif: ["var(--font-apple)"],
         sans: ["var(--font-inter)"],

@@ -61,3 +61,11 @@ li:nth-child(odd) {
   padding-left: 30px;
   padding-right: 0;
 }
+
+.timeline-box-1 {
+  @apply w-full space-y-5 rounded-xl bg-black p-3 text-center text-custom-yellow md:p-5;
+}
+
+.timeline-box-2 {
+  @apply h-[13rem] space-y-5 rounded-xl bg-black p-3 text-custom-yellow md:p-5 xl:h-[14rem];
+}

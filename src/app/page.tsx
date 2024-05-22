@@ -10,26 +10,29 @@ export default function Home() {
   return (
     <main className="min-h-screen w-screen overflow-x-hidden">
       {/* <Navbar /> */}
-      <section className="min-h-screen w-full bg-cover relative flex items-center justify-center">
+      <section className="relative flex min-h-screen w-full items-center justify-center bg-[url('/images/cover-1.jpg')] bg-cover bg-center">
         <Image
           src={"/images/cover-1.jpg"}
           alt=""
           width={4096}
           height={2731}
-          className="w-full h-auto absolute -z-10 top-0"
+          className="absolute top-0 -z-10 h-auto w-full object-fill max-md:hidden"
         />
-        <div className="flex items-center gap-10">
-          <h1 className="text-9xl font-bold">Masjid</h1>
-          <h1 className="text-9xl italic">Istiqlal</h1>
+        <div className="flex items-center gap-10 text-6xl sm:text-5xl md:text-9xl">
+          <h1 className=" font-bold">Masjid</h1>
+          <h1 className=" italic">Istiqlal</h1>
         </div>
-        <div className="bg-gradient-to-t from-[rgb(254_220_96/1)_50%] to-transparent h-[30rem] w-full absolute -bottom-52" />
-        <ChevronsDown className="absolute -bottom-[0rem] left-1/2 w-10 h-10 z-20 animate-bounce" />
+        <div className="absolute -bottom-52 h-[30rem] w-full bg-gradient-to-t from-[rgb(254_220_96/1)_50%] to-transparent" />
+        <ChevronsDown className="absolute -bottom-[0rem] left-[45%] z-20 h-10 w-10 animate-bounce md:left-1/2" />
       </section>
-      <section className="relative min-h-screen pt-80 bg-custom-yellow text-black pb-20 space-y-10">
-        <Heading className="text-8xl px-40 font-serif text-center" color="#000">
-          Sejarah <span className="italic font-bold">Masjid Istiqlal</span>{" "}
+      <section className="relative min-h-screen space-y-10 bg-custom-yellow pb-20 pt-80 text-black lg:px-20">
+        <Heading
+          className="px-5 text-center font-serif text-5xl md:text-8xl xl:px-40"
+          color="#000"
+        >
+          Sejarah <span className="font-bold italic">Masjid Istiqlal</span>{" "}
           Sebagai Simbol{" "}
-          <span className="italic font-bold">Kemerdekaan Indonesia</span>.
+          <span className="font-bold italic">Kemerdekaan Indonesia</span>.
         </Heading>
         <ImageAnimation start="right">
           <Image
@@ -37,40 +40,31 @@ export default function Home() {
             alt=""
             width={1080}
             height={893}
-            className="z-50 mx-auto"
+            className="z-50 mx-auto max-md:px-5"
           />
         </ImageAnimation>
-        <ul className="space-y-20 px-40">
-          <ImageAnimation
-            start="left"
-            className="text-custom-yellow bg-black p-5 w-full rounded-xl"
-          >
-            <h1 className="text-5xl xl:text-7xl font-bold text-center">1950</h1>
-            <p className="text-base xl:text-xl font-light">
+        <ul className="space-y-20 px-5 xl:px-40">
+          <ImageAnimation start="left" className="timeline-box-1">
+            <h1 className="text-center text-5xl font-bold xl:text-7xl">1950</h1>
+            <p className="text-sm font-light xl:text-xl">
               Sejumlah tokoh Islam menggelar rapat di Deca Park untuk membahas
               pembangunan masjid. Tokoh yang mengikuti rapat di antaranya Anwar
               Tjokroaminoto, Taufiqurrahman, dan Wahid Hasyim.
             </p>
           </ImageAnimation>
 
-          <li className="flex flex-row w-full">
+          <li className="flex w-full flex-col items-center md:flex-row md:justify-center">
             <div className="flex flex-col gap-10">
-              <ImageAnimation
-                start="left"
-                className="text-custom-yellow bg-black p-5 rounded-xl h-[14rem]"
-              >
-                <h1 className="text-5xl xl:text-7xl font-bold">1955</h1>
-                <p className="text-base xl:text-xl font-light">
+              <ImageAnimation start="left" className="timeline-box-2">
+                <h1 className="text-5xl font-bold xl:text-7xl">1955</h1>
+                <p className="text-sm font-light xl:text-xl">
                   Pemerintah mengadakan sayembara maket Masjid Istiqlal dan
                   menggalang dana dari masyarakat untuk membiayai pembangunan.
                 </p>
               </ImageAnimation>
-              <ImageAnimation
-                start="left"
-                className="text-custom-yellow bg-black p-5 rounded-xl h-[14rem]"
-              >
-                <h1 className="text-5xl xl:text-7xl font-bold">1954</h1>
-                <p className="text-base xl:text-xl font-light">
+              <ImageAnimation start="left" className="timeline-box-2">
+                <h1 className="text-5xl font-bold xl:text-7xl">1954</h1>
+                <p className="text-sm font-light xl:text-xl">
                   Yayasan Masjid Istiqlal diresmikan setelah Presiden Sukarno
                   menyetujui rencana pembangunan masjid.
                 </p>
@@ -84,9 +78,9 @@ export default function Home() {
                   alt=""
                   width={750}
                   height={512}
-                  className="h-auto full"
+                  className="full h-auto"
                 />
-                <p className="tracking-wider">
+                <p className="p-1 text-justify text-xs tracking-wider max-md:text-xs">
                   Presiden Sukarno dan dewan juri sayembara perancangan Masjid
                   Istiqlal berfoto dengan tiga panel gambar karya F. Silaban
                   yang ditetapkan sebagai pemenang pada 1955. Sumber: Selayang
@@ -96,24 +90,21 @@ export default function Home() {
             </div>
           </li>
 
-          <li className="flex flex-row-reverse w-full">
+          <li className="flex w-full flex-col items-center md:flex-row-reverse md:justify-center">
             <div className="flex flex-col gap-10">
-              <ImageAnimation
-                start="right"
-                className="text-custom-yellow bg-black p-5 rounded-xl h-[14rem]"
-              >
-                <h1 className="text-5xl xl:text-7xl font-bold">1961</h1>
-                <p className="text-base xl:text-xl font-light">
+              <ImageAnimation start="right" className="timeline-box-2">
+                <h1 className="text-5xl font-bold xl:text-7xl">1961</h1>
+                <p className="text-sm font-light xl:text-xl">
                   Pemerintah mengadakan sayembara maket Masjid Istiqlal dan
                   menggalang dana dari masyarakat untuk membiayai pembangunan.
                 </p>
               </ImageAnimation>
               <ImageAnimation
                 start="right"
-                className="text-custom-yellow bg-black p-5 rounded-xl h-[12rem]"
+                className="h-[12rem] rounded-xl bg-black p-5 text-custom-yellow"
               >
-                <h1 className="text-5xl xl:text-7xl font-bold ">1978</h1>
-                <p className="text-base xl:text-xl font-light">
+                <h1 className="text-5xl font-bold xl:text-7xl ">1978</h1>
+                <p className="text-sm font-light xl:text-xl">
                   Masjid Istiqlal selesai dibangun, peresmiannya dihadiri oleh
                   Presiden Suharto.
                 </p>
@@ -128,7 +119,7 @@ export default function Home() {
                   height={462}
                   className="h-auto w-full"
                 />
-                <p className="tracking-wider">
+                <p className="p-1 text-justify text-xs tracking-wider">
                   KOMPAS/H Kodhyat Persiapan pengecoran kubah Masjid Istiqlal
                   pada awal Agustus 1971. Lokasi masjid negara yang tengah
                   dibangun itu bersebelahan dengan Gereja Katheral Jakarta.
@@ -138,10 +129,13 @@ export default function Home() {
           </li>
         </ul>
       </section>
-      <section className="relative text-black bg-white pt-40 flex flex-col items-center space-y-10 pb-20">
-        <Heading color="#000" className="text-8xl text-center px-40">
-          Ide <span className="italic font-bold">Proklamasi</span> hingga
-          Monumen <span className="italic font-bold">Keagungan Nasional</span>.
+      <section className="relative flex flex-col items-center space-y-10 bg-white pb-20 pt-10 text-black md:pt-40">
+        <Heading
+          color="#000"
+          className="px-10 text-center text-6xl xl:px-40 xl:text-8xl"
+        >
+          Ide <span className="font-bold italic">Proklamasi</span> hingga
+          Monumen <span className="font-bold italic">Keagungan Nasional</span>.
         </Heading>
         <ImageAnimation start="left">
           <Image
@@ -152,7 +146,7 @@ export default function Home() {
             className="h-auto w-full"
           />
         </ImageAnimation>
-        <div className="font-light text-xl text-justify space-y-10 px-40 xl:px-80">
+        <div className="space-y-10 px-10 text-base font-light md:px-20 lg:text-justify lg:text-xl xl:px-40 xl:px-80">
           <Paragraph>
             Empat tahun pascaproklamasi kemerdekaan, tokoh agama Islam di Tanah
             Air mulai membicarakan rencana pendirian masjid monumental yang
@@ -183,22 +177,22 @@ export default function Home() {
           </Paragraph>
         </div>
       </section>
-      <section className="relative text-custom-yellow pt-40 flex flex-col items-center space-y-10 px-20 ">
+      <section className="relative flex flex-col items-center space-y-10 pt-10 text-custom-yellow md:px-20 md:pt-40">
         <Image
           src={"/images/cover-3.png"}
           alt=""
           width={1739}
           height={1737}
-          className="h-auto w-full absolute bottom-0 -z-20 opacity-50"
+          className="absolute bottom-0 -z-20 h-auto w-full opacity-50"
         />
-        <div className="bg-gradient-to-t from-transparent via-[rgb(0_0_0/1)_30%] to-transparent h-[40rem] w-full absolute left-0 -bottom-40 -z-10" />
-        <Heading color="#FEDC60" className="text-8xl text-center">
+        <div className="absolute -bottom-40 left-0 -z-10 h-[40rem] w-full bg-gradient-to-t from-transparent via-[rgb(0_0_0/1)_30%] to-transparent" />
+        <Heading color="#FEDC60" className="text-center text-6xl md:text-8xl ">
           <span className="italic">Sayembara</span> dan{" "}
           <span className="italic">Lokasi</span>: Perjalanan Awal Pembangunan{" "}
           <span className="italic">Masjid Istiqlal</span>
         </Heading>
 
-        <div className="font-light text-xl text-justify space-y-10 px-40 xl:px-80">
+        <div className="lf:px-40 space-y-10 px-5 text-left text-base font-light md:text-justify lg:text-xl xl:px-80">
           <Paragraph>
             Setelah panitia terbentuk dan lokasi pembangunan masjid ditentukan,
             pemerintah mengadakan sayembara maket Masjid Istiqlal. Kegiatan ini
@@ -214,16 +208,16 @@ export default function Home() {
             Sukarno memutuskan masjid ini dibangun di Taman Wijaya Kusuma yang
             dahulu bernama Wilhelmina Park.
           </Paragraph>
-          <div className="w-full flex flex-col items-center">
+          <div className="flex w-full flex-col items-center">
             <ImageAnimation start="right">
               <Image
                 src={"/images/doc-4.png"}
                 alt=""
                 width={920}
                 height={420}
-                className="h-auto full"
+                className="full h-auto"
               />
-              <p className="w-full tracking-wider text-sm">
+              <p className="w-full text-sm tracking-wider">
                 Wilhelmina Park. Tropen museum
               </p>
             </ImageAnimation>
@@ -239,14 +233,17 @@ export default function Home() {
           </Paragraph>
         </div>
       </section>
-      <section className="relative text-custom-yellow pt-40 flex flex-col items-center space-y-10 px-20">
-        <Heading color="#FEDC60" className="text-8xl text-center px-40">
+      <section className="relative flex flex-col items-center space-y-10 pt-40 text-custom-yellow lg:px-20">
+        <Heading
+          color="#FEDC60"
+          className="text-center text-6xl md:text-8xl xl:px-40"
+        >
           Proses Panjang Pembangunan Masjid Istiqlal:{" "}
           <span className="italic">Pembongkaran Benteng</span> dan{" "}
           <span className="italic">Kendala Dana</span>.
         </Heading>
 
-        <div className="font-light text-xl text-justify space-y-10 px-40 xl:px-80">
+        <div className="space-y-10 px-5 font-light lg:text-justify lg:text-xl xl:px-40 xl:px-80">
           <Paragraph>
             Pada 26 November 1954, Pemerintah Kota Jakarta mulai membongkar
             kompleks Benteng tersebut untuk dijadikan lahan bangunan Masjid
@@ -291,17 +288,20 @@ export default function Home() {
           alt=""
           width={2178}
           height={1226}
-          className="h-auto w-full absolute bottom-0 -z-20 opacity-50"
+          className="absolute bottom-0 -z-20 h-auto w-full opacity-50"
         />
-        <div className="bg-gradient-to-t from-[rgb(0_0_0/1)_10%] to-transparent h-[20rem] w-full absolute left-0 -bottom-20 -z-10" />
+        <div className="absolute -bottom-20 left-0 -z-10 h-[20rem] w-full bg-gradient-to-t from-[rgb(0_0_0/1)_10%] to-transparent" />
       </section>
-      <section className="min-h-screen relative text-custom-yellow pt-40 flex flex-col items-center space-y-10 px-20 pb-[30rem]">
-        <Heading color="#FEDC60" className="text-8xl text-center px-40">
+      <section className="relative flex min-h-screen flex-col items-center space-y-10 pb-[30rem] pt-40 text-custom-yellow lg:px-20">
+        <Heading
+          color="#FEDC60"
+          className="px-5 text-center text-6xl lg:text-8xl xl:px-40"
+        >
           Gerakan <span className="italic">Penggalangan Dana</span> dan{" "}
           <span className="italic">Makna</span> di Balik Nama Masjid Istiqlal.
         </Heading>
 
-        <div className="font-light text-xl text-justify space-y-10 px-40 xl:px-80">
+        <div className="text space-y-10 px-5 font-light lg:text-justify lg:text-xl xl:px-40 xl:px-80">
           <Paragraph>
             Pada 1955, pemerintah mengumumkan seruan kepada umat Islam untuk
             membantu menggalang dana pembangunan Masjid Istiqlal. Gerakan
@@ -332,9 +332,9 @@ export default function Home() {
           alt=""
           width={1703}
           height={959}
-          className="h-auto w-full absolute bottom-0 -z-20"
+          className="absolute bottom-0 -z-20 h-auto w-full"
         />
-        <div className="bg-gradient-to-t from-[#FEDC60]/50 to-transparent h-[20rem] w-full absolute left-0 bottom-0 -z-10" />
+        <div className="absolute bottom-0 left-0 -z-10 h-[20rem] w-full bg-gradient-to-t from-[#FEDC60]/50 to-transparent" />
       </section>
     </main>
   );
